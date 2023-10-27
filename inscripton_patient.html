@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page d'inscription</title>
+    <link rel="stylesheet" href="../css/StyleAccueil.css">
+    <link rel="stylesheet" href="../css/StyleInscription_med.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="header-left">
+            <a href="Accueil.html" class="link-logo"><img class="logo" src="../images/doc2.png" alt="logoSite" title="revenir à l'accueil" width="50" height="50"/></a>
+            <p class="nom-site">SamaDocteur</p>
+        </div>
+        <form id="connexion" class="connexion">
+            <button class="button-inscription" formaction="./inscripton_patient.html">je suis patient</button>
+            <button form="connexion" formaction="inscription_med.html" class="button-inscription">je suis médecin</button>
+            <button class="button-connexion" form="connexion" formaction="connexion.html" type="submit">Se connecter</button>
+        </form>
+    </header>
+    <main class="container-main">
+    
+    <div class="contient_form">
+        <form class="form-inscription" action="#">
+            <p class="inscription-text">Inscription</p>
+            <div class="flex-form">
+                <div class="bloc-display">
+                    <label class="nom espace-label bloc-display" for="#">Nom<span>*</span></label>
+                    <input class="input-coordonnee" type="text" required placeholder="Nom">
+                </div>
+                <div class="bloc-display">
+                    <label class="prenom espace-label bloc-display" for="#">Prénom<span>*</span></label>
+                    <input class="input-coordonnee" type="text" required placeholder="Prénom">
+                </div>
+            </div>
+            <div class="flex-form">
+                <div class="bloc-display">
+                    <label class="bloc-display" for="#">Genre<span>*</span></label>
+                    <select class="bloc-display" name="" id="">
+                        <option value="">Homme</option>
+                        <option value="">Femme</option>
+                        <option value="">Non défini</option>
+                    </select>
+                </div>
+                <div class="bloc-display">
+                    <label class="bloc-display" for="#" >Email</label>
+                    <input class="input-coordonnee" type="email" required placeholder="exemple@gmail.com">
+                </div>
+            </div>
+            <div class="flex-form">
+                
+                <div class="bloc-display">
+                    <label class="bloc-display" for="#">Téléphone<span>*</span></label>
+                    <input class="bloc-display input-coordonnee" type="number" placeholder="Numéro de téléphone">
+                </div>
+                <div>
+                    <label class="bloc-display" for="">Adresse<span>*</span></label>
+                    <input type="text" class="input-coordonnee" placeholder="Votre adresse" required>
+                </div>
+            </div>
+            <div class="flex-form">
+                <div>
+                    <label class="bloc-display" for="">Ville<span>*</span></label>
+                    <select name="" id="" required>
+                        <option value="">Adéane</option>
+                        <option value="">Bakel</option>
+                        <option value="">Bambey</option>
+                        <option value="">Bargni</option>
+                        <option value="">Bignona</option>
+                        <option value="">Dagana</option>
+                        <option value="">Dahra</option>
+                        <option value="">Dakar</option>
+                        <option value="">Dara</option>
+                        <option value="">Diamniadio</option>
+                        <option value="">Diawara</option>
+                        <option value="">Diofor</option>
+                        <option value="">Diourbel</option>
+                        <option value="">Fatick</option>
+                        <option value="">Foundiougne</option>
+                        <option value="">Gandiaye</option>
+                        <option value="">Goléré</option>
+                        <option value="">Gossas</option>
+                        <option value="">Goudomp</option>
+                        <option value="">Guinguinéo</option>
+                        <option value="">Guédiawaye</option>
+                        <option value="">Guéoul</option>
+                        <option value="">Joal-Fadiout</option>
+                        <option value="">Joal-Fadiouth</option>
+                        <option value="">Kaffrine</option>
+                        <option value="">Kanel</option>
+                        <option value="">Kaolack</option>
+                        <option value="">Kayar</option>
+                        <option value="">Khombole</option>
+                        <option value="">Kolda</option>
+                        <option value="">Kougheul</option>
+                        <option value="">Kébémer</option>
+                        <option value="">Kédougou</option>
+                        <option value="">Linguère</option>
+                        <option value="">Louga</option>
+                        <option value="">Marassoum</option>
+                        <option value="">Matam</option>
+                        <option value="">Mbacké</option>
+                        <option value="">Mbaké</option>
+                        <option value="">Mboro</option>
+                        <option value="">Mbour</option>
+                        <option value="">Meckhe</option>
+                        <option value="">Mermoz-baobab</option>
+                        <option value="">Mékhé</option>
+                        <option value="">Ndibéne Dahra</option>
+                        <option value="">Ndioum</option>
+                        <option value="">Ndofane</option>
+                        <option value="">Ndoffane</option>
+                        <option value="">Nguékhokh</option>
+                        <option value="">Nioro du Rip</option>
+                        <option value="">N'diareme limamoulaye</option>
+                        <option value="">Ouro sogui</option>
+                        <option value="">Ourossogui</option>
+                        <option value="">Ousouye</option>
+                        <option value="">Passi</option>
+                        <option value="">Pikine</option>
+                        <option value="">Podor</option>
+                        <option value="">Polel diaoubé</option>
+                        <option value="">Porham</option>
+                        <option value="">Pout</option>
+                        <option value="">Ranérou</option>
+                        <option value="">Richard Toll</option>
+                        <option value="">Rufisque</option>
+                        <option value="">Saint Louis</option>
+                        <option value="">Saly</option>
+                        <option value="">Sokone</option>
+                        <option value="">Sébikhotane</option>
+                        <option value="">Sédhiou</option>
+                        <option value="">Sémé</option>
+                        <option value="">Tambacounda</option>
+                        <option value="">Thiadiaye</option>
+                        <option value="">Thiès</option>
+                        <option value="">Thiès Nones</option>
+                        <option value="">Tiadiaye</option>
+                        <option value="">Tionk Essil</option>
+                        <option value="">Tivaouane</option>
+                        <option value="">Tiébo</option>
+                        <option value="">Touba</option>
+                        <option value="">Vélingara</option>
+                        <option value="">Waoundé</option>
+                        <option value="">Warang</option>
+                     </select>
+                </div>
+                
+            </div>
+            <label class="bloc-display " for="#">Mot de passe<span>*</span></label>
+            <input class="bloc-display width-100 margin-bottom" required type="password" placeholder="Mot de passe">
+            <label class="bloc-display" for="#">Confirmation du mot de passe<span>*</span></label>
+            <input class="bloc-display width-100 margin-bottom" required type="password" placeholder="Confirmer le mot de passe">
+            <input class="input-CGU" type="checkbox" required>J'ai lu et accepté les <a class="CGU-link" href="#">conditions générales d'utilisation</a>
+            <button class="inscription-button">Envoyer ma demande</button>
+            <p class="avoir-compte">Vous avez déjà un compte ? <a href="./connexion.html">Se connecter</a></p>
+        </form> 
+
+    </div>
+    
+    </main>
+    <footer class="foot">
+        <p class="foot-text">© 2023 Service de Réservation de RDV en ligne</p>
+        <div class="foot-container">
+            <div class="apropos">
+                <h3 class="forH3 resume">A propos de SamaDocteur</h3>
+                <a href="Accueil.html" class="pt">Accueil</a>
+                <a href="#" class="pt">Conditions générales d'utilisation</a>
+                <a href="#" class="pt">Politique de confidentialité</a>
+                <a href="#" class="pt">FAQ</a>
+            </div>
+            <div class="speciality">
+                <h3 class="forH3 resume">Trouver un spécialiste</h3>
+                <a href="#" class="pt">Cardialogue</a>
+                <a href="#" class="pt">Dentiste</a>
+                <a href="#" class="pt">Psychiatre</a>
+                <a href="#" class="pt">Dermatologue</a>
+            </div>
+            <div class="contct">
+                <h3 class="forH3 resume">Nous contacter</h3>
+                <p class="pm"><strong>Email:</strong> samadocteur@yahoo.fr</p>
+                <p class="pm"><strong>Service Client:</strong> 77 000 00 00</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

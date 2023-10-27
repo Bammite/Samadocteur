@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin_avis&comments</title>
+    <link rel="stylesheet" href="../css/style_admin_interface.css">
+    <link rel="stylesheet" href="../css/style_admin_Avis_&_Comments.css">
+    <script src="../javascript/admin_interface.js" defer></script>
+    <script src="../javascript/admin_Faqs.js" defer></script>
+    <script src="../javascript/responsivite.js"></script>
+</head>
+<body>
+    <header class="topbar">
+        <div class="icone_menu">
+            <img id="bouton_affiche_tab_bord" onclick="affichage_TableauDeBord()" src="../images/icone_menu.png" alt="Afficher_tableau_de_bord" title="Afficher le tableau de bord">
+        </div>
+        <div class="header-left">
+            <a href="Accueil.html" class="link-logo"><img class="logo" src="../images/doc2.png" alt="logoSite" title="revenir à l'accueil"/></a>
+            <p class="nom-site">SamaDocteur</p>
+        </div>
+        <p class="profil"><img src="../images/gg_profile.svg" alt="" onclick="toggleMenuProfil()"></p>
+        <div id="modalProfil" class="modal">
+            <p class="voir-pp" ><a href="profil.html">Voir Profil</a></p>
+            <hr>
+            <p class="deconnexion"><a  href="./connexion_admin.html">Se Déconnecter</a></p>
+        </div>
+    </header>
+    <main>
+        <section class="tableau_de_bord">
+            <h3>Tabeau de Bord</h3>
+            <div class="options_tableau">
+                <a href="./admin_interface.html">
+                    <button>Accueil</button>
+                </a>
+                <a href="./admin_interface2.html">
+                    <button>Médecins</button>
+                </a>
+                <a href="./admin_interface3.html">
+                    <button>Patients</button>
+                </a>
+                <a href="./admin_interface4.html">
+                    <button class="actual">Avis & commentaires</button>
+                </a>
+                <a href="./admin_interface5.html">
+                    <button>FAQs</button>
+                </a>
+            </div>
+        </section>
+        <section class="centre_droit">
+            <div class="container-faq">
+                <h1>Gestion des Avis & Commentaires</h1>
+                <section class="body-faq">
+                    <div class="questions question1">
+                            <button>Commentaire de: <span>Samba Kane</span></button>
+                            <img class="share" src="../images/share.png" title="Publier">
+                            <img class="delete" src="../images/delete.png" title="Supprimer">
+                            <div class="reponses reponse1 rep-hidden">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem, officiis!.</p>
+                            </div>
+                    </div>
+                    <div class="questions question2">
+                        <button>Commentaire de: <span>Papa Assane Fall</span></button>
+                        <img class="share" src="../images/share.png" title="Publier">                         
+                        <img class="delete" src="../images/delete.png" title="Supprimer">
+                        
+                        <div class="reponses reponse2 rep-hidden">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non quos a animi alias consequatur, quasi maxime modi soluta facilis. Culpa?    .</p>
+                        </div>
+                    </div>
+                    <div class="questions question3">
+                        <button>Commentaire de: <span>Aissata Ba</span></button>
+                        <img class="share" src="../images/share.png" title="Publier">
+                        <img class="delete" src="../images/delete.png" title="Supprimer">
+                        <div class="reponses reponse3 rep-hidden">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem, itaque.</p>
+                        </div>
+                    </div>
+                    <div class="questions question4">
+                        <button>Commentaire de: <span>Ndeye Astou Sagna</span></button>
+                        <img class="share" src="../images/share.png" title="Publier">
+                        <img class="delete" src="../images/delete.png" title="Supprimer">
+                        <div class="reponses reponse4 rep-hidden">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, aliquid?</p>
+                        </div>
+                    </div>
+                    <div class="questions question5">
+                        <button>Commentaire de: <span>Oulimatou Cisse</span></button>
+                        <img class="share" src="../images/share.png" title="Publier">
+                        <img class="delete" src="../images/delete.png" title="Supprimer">
+                        <div class="reponses reponse5 rep-hidden">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt recusandae debitis, iste iure consectetur, totam accusantium quasi, error perferendis commodi neque ratione aspernatur saepe nisi ea blanditiis nemo modi? Soluta!</p>
+                        </div>
+                    </div>
+                    <div class="questions question6">
+                        <button>Commentaire de: <span>Ibrahima Konate</span></button>
+                        <img class="share" src="../images/share.png" title="Publier">
+                        <img class="delete" src="../images/delete.png" title="Supprimer">
+                        <div class="reponses reponse6 rep-hidden">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas id obcaecati, deleniti dicta ea ullam necessitatibus aliquid consectetur. Temporibus corporis cum aliquam fugiat ab soluta doloribus excepturi sequi nostrum unde?</p>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </section>
+    </main>    
+</body>
+</html>

@@ -1,0 +1,119 @@
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #ecf0f3;
+    width: calc(100% - 300px);
+
+    padding-top: 0;
+}
+
+.info{
+    display: flex;
+    justify-content: space-around;
+    background-color: white;
+    margin: 0 auto;
+    height: 600px;
+    width: 90%;
+    border-radius: 15px;
+}
+
+form{
+    margin: 50px 80px 50px 0;
+    width: 100%;
+    padding-left: 80px;
+}
+
+.img-cds{
+    width: 50%;
+    height: auto;
+}
+
+h1{
+    color: rgb(43, 122, 168);
+}
+
+label{
+    display: block;
+   
+}
+input{
+    height: 35px;
+    margin-top: 10px;
+}
+label, input{
+    width: 100%;
+}
+
+.poids, .taille, .maladie, .grp-sang{
+    margin-top: 20px;
+}
+
+select{
+    width: 100%;
+    margin-top: 10px;
+    height: 46px;
+    font-size: 16px;
+}
+
+button{
+    width: 100%;
+    margin-top: 20px;
+    height: 46px;
+    font-size: 18px;
+    background-color: rgb(187, 212, 226);
+    border: 2px outset rgb(124, 192, 231);
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(124, 192, 231);
+}
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    .container{
+        width: 100%;
+    }
+    .main{
+        display: block;
+        width: 100%;
+        margin-left: 0;
+    }
+    .button-sb{
+        margin-bottom: 20px;
+    }
+    .info{
+        width: 90%;
+        margin: 0 20px;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .info{
+        margin-top: 50px;
+        display: block;
+        height: auto;
+        margin-bottom: 50px;
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .poids,
+    .taille,
+    .maladie,
+    .grp-sang{
+        width: 100%;
+    }
+    .img-cds{
+        margin-top: 20px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="../css/style_connexion_admin.css">
+    <script src="../javascript/admin_connexion.js"></script>
+</head>
+<body>
+    <header class="topbar">
+        <div class="header-left">
+            <a href="Accueil.html" class="link-logo"><img class="logo" src="../images/doc2.png" alt="logoSite" title="revenir à l'accueil"/></a>
+            <p class="nom-site">SamaDocteur</p>
+        </div>
+
+        </header>
+            <div class="container">
+                <main class="container-main">
+                    <p class="connexion-text">Connexion</p>
+                    <form id="connexion-form" action="./admin_bienvenue.html" method="post" name="connexion" onsubmit="return validerConnexion()">
+                        <label for="identifiant">Nom d'utilisateur</label>
+                        <input type="text" id="identifiant" name="identifiant" placeholder="Votre nom d'utilisateur" required>
+                        <label for="mdp">Mot de passe</label>
+                        <input type="password" id="mdp" name="mdp" placeholder="Votre mot de passe" required>
+                        <p class="forget-mdp"><a href="#">Mot de passe oublié ?</a></p>
+                        <button class="button-connexion" autofocus>Se connecter</button>
+                    </form>
+                </main>
+            </div>
+</body>
+</html>

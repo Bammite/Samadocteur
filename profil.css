@@ -1,0 +1,148 @@
+/* Styles for the header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+
+/* Réinitialisation des marges et des rembourrages par défaut */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    background-color: #f5f5f5;
+    background-image: url("../../images/backgroundimg.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.head-profile {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.head-profile h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.logout-link {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.contenu {
+    background-color: rgba(255, 255, 255, 0.7); /* Couleur blanche avec une opacité de 0.7 (70%) */
+    border-radius: 8px;
+    margin: 130px auto 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    padding: 2%;
+    width: 50%;
+    min-width: 550px;
+    font-size: 20px;
+}
+
+
+
+
+
+.retour-text{
+    font-size: 20px;
+    color: black;
+    margin: 40px 0 0 20px;
+    text-decoration: none;
+}
+
+.retour-text::before{ 
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/retour.png) center center / cover no-repeat;
+    margin-right: 10px;
+    margin-top: -5px;
+    vertical-align: middle;
+}
+.retour-text a:hover{
+    color: #067402;
+    animation: .5s;
+}
+
+#profile-info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile-image {
+    flex: 1;
+    text-align: center;
+}
+
+.profile-image img {
+    width: 150px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #333;
+}
+
+.profile-image input[type="file"] {
+    margin-top: 10px;
+    display: block;
+}
+
+.profile-details {
+    flex: 2;
+    padding: 20px;
+}
+
+.profile-details form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Masquer le texte "Aucun élément sélectionné" dans la balise de type file */
+input[type="file"] {
+    color: transparent;
+    
+}
+
+
+button.submit {
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.submit:hover {
+    background-color: #555;
+}

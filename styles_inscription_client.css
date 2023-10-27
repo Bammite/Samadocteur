@@ -1,0 +1,114 @@
+body, html
+{
+    margin: 0;
+    padding: O;
+    height: 100%;
+}
+.fond
+{
+    padding-top: 70px;
+    height: calc(100vh - 100px);
+    background-image: url(../images/arriere_plan_inscription.png);
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+form
+{
+    position: fixed;
+    left: 20%;
+    top: 15%;
+    background-color: rgb(255, 255, 255, 0.5);
+    width: 800px;
+    height: 500px;
+    border-radius: 20px;
+}
+
+form h5
+{
+    padding-left:50px;
+}
+#prenom
+{
+    width: 340px;
+    height: 51px;
+}
+
+form input,label,select
+{
+    background-color: rgb(255, 255, 255,0.1);
+    display: block;
+    margin-left: 50px;
+}
+form input,select
+{
+    margin-bottom: 10px;
+}
+
+#valider
+{
+    width: 100px;
+    background-color: rgb(0, 128, 0,0.8);
+}
+
+#effacer
+{
+    width: 100px;
+    background-color: rgba(197, 201, 197, 0.8);
+}
+
+.form_row
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    margin-right: 200px;
+}
+
+.button
+{
+    margin-top: 10px;
+    justify-content: space-between;
+    display: flex;
+    width: 300px;
+
+}
+
+div p
+{
+    padding-left:50px;
+}
+
+a
+{
+    color: blue;
+}
+
+.compte
+{
+    display: flex;
+    margin-left: 320px;
+    position: absolute;
+    bottom: 128px;
+}
+
+.est_medecin
+{
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
+    
+    
+}
+
+.cocher
+{
+    display: flex;
+    margin-right: 0;
+}
+.cocher label
+{
+    margin-left: 0;
+}

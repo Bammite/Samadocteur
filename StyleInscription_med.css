@@ -1,0 +1,160 @@
+
+body{
+    background-color: rgba(216, 226, 218, 0.1);
+}
+
+.topbar{
+    z-index: 8;
+}
+
+.container-main{
+    display: flex;
+    position: relative;
+    height: 780px;
+    z-index: 3;
+    justify-content: center;
+    margin-top: 100px;
+    border-radius: 15px;
+
+ 
+}
+
+.image-inscription{
+
+    height: 780px;
+}
+
+.contient_form
+{
+    background-image: url(../images/image-inscription.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 1%;
+    width: 60%;
+    min-width: 600px;
+}
+
+form input,select,option
+{
+    background-color: rgb(255, 255, 255,0.5);
+}
+
+.form-inscription{
+    margin: 20px 50px;
+    width: 500px;
+    
+    
+}
+
+.flex-form{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    
+}
+
+.bloc-display{
+    display: block;
+}
+
+
+label{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.width-100{
+    width: 493px;
+    height: 36px;
+}
+
+.input-coordonnee{
+    width: 230px;
+    height: 30px;
+}
+
+.input-CGU{
+    margin-right: 10px;
+}
+
+.CGU-link{
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.CGU-link:hover{
+    text-decoration: underline;
+    color: rgb(88, 206, 9);
+    font-size: 17px;
+}
+
+select{
+    height: 36px;
+    width: 200px;
+}
+
+input, select, option{
+    font-size: 15px;
+}
+
+span{
+    margin: 0 0 5px 3px;
+    font-size: 15px;
+    color: red;
+}
+
+.margin-bottom{
+    margin-bottom: 15px;
+}
+
+.inscription-button{
+    width: 500px;
+    height: 40px;
+    margin-top: 20px;
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(1, 147, 184);
+    border: 1px solid rgb(1, 147, 184);
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+.inscription-button:hover{
+    background-color: rgb(7, 150, 2);
+    border: 1px solid rgb(7, 150, 2);
+}
+
+.inscription-text{
+    text-align: center;
+    font-size: 36px;
+    margin: 10px 0;
+    color: black
+}
+
+.avoir-compte{
+    text-align: center;
+    margin-top: 7px;
+}
+
+.avoir-compte a{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.avoir-compte a:hover{
+    color: rgb(88, 206, 9);
+}
+
+.foot{
+    margin-top: 10px;
+}
+
+
+@media screen and (max-width:610px){
+    .flex-form{
+        width: 100%;
+    }
+}

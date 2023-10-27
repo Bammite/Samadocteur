@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 100px;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    background-color: rgb(129, 126, 126)
+}
+h1{
+    transition: 3s;
+    font-size: 35px;
+    text-align: center;
+}
+.begin{
+
+    background-color: black;
+    font-size: 70px;
+    width: 500px;
+    text-align: center;
+    
+    
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}

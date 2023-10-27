@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin_medecins</title>
+    <link rel="stylesheet" href="../css/style_admin_interface.css">
+    <script src="../javascript/admin_interface.js" defer></script>
+    <script src="../javascript/boite_modale.js"></script>
+    <script src="../javascript/responsivite.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="icone_menu">
+      <img id="bouton_affiche_tab_bord" onclick="affichage_TableauDeBord()" src="../images/icone_menu.png" alt="Afficher_tableau_de_bord" title="Afficher le tableau de bord">
+    </div>
+    <div class="header-left">
+        <a href="Accueil.html" class="link-logo"><img class="logo" src="../images/doc2.png" alt="logoSite" title="revenir à l'accueil"/></a>
+        <p class="nom-site">SamaDocteur</p>
+    </div>
+    <p class="profil"><img src="../images/gg_profile.svg" alt="" onclick="toggleMenuProfil()"></p>
+    <div id="modalProfil" class="modal">
+        <p class="voir-pp" ><a href="profil.html">Voir Profil</a></p>
+        <hr>
+        <p class="deconnexion"><a  href="./connexion_admin.html">Se Déconnecter</a></p>
+    </div>
+  </header>
+    <main>
+        <section class="tableau_de_bord">
+            <h3>Tabeau de Bord</h3>
+            <div class="options_tableau">
+                <a href="./admin_interface.html">
+                    <button>Accueil</button>
+                </a>
+                <a href="./admin_interface2.html">
+                    <button class="actual">Médecins</button>
+                </a>
+                <a href="./admin_interface3.html">
+                    <button>Patients</button>
+                </a>
+                <a href="./admin_interface4.html">
+                    <button>Avis & commentaires</button>
+                </a>
+                <a href="./admin_interface5.html">
+                    <button>FAQs</button>
+                </a>
+            </div>
+        </section>
+        <section class="centre_droit">
+            <div class="liste_medecins">
+                <a href="./profil_medecins/profil_med_0001.html">
+                    <button>
+                    <h2>Dr. Fatou Ndiaye</h2>
+                    <h4>Gynecologue</h4>
+                </button>
+                </a>
+                <a href="./profil_medecins/profil_med_0002.html">
+                <button>
+                    <h2>Dr. Moussa Ba</h2>
+                    <h4>Urologue</h4>
+                </button>
+                </a>
+                <a href="./profil_medecins/profil_med_0003.html">
+                    <button>
+                    <h2>Dr. Astou Camara</h2>
+                    <h4>Cardiologue</h4>
+                </button>
+                </a>
+                <a href="./profil_medecins/profil_med_0004.html">
+                <button>
+                    <h2>Dr. Issa Fall</h2>
+                    <h4>Généraliste</h4>
+                </button>                    
+                </a>
+                <a href="./profil_medecins/profil_med_0005.html">
+                <button>
+                    <h2>Dr. Ibrahima Diop</h2>
+                    <h4>Cardiologue</h4>
+                </button>                    
+                </a>
+                <a href="./profil_medecins/profil_med_0006.html">
+                <button>
+                    <h2>Dr. Djiby Diouf</h2>
+                    <h4>Généraliste</h4>
+                </button>                 
+                </a>
+                
+                <button class="ajout">
+                    <h3> + Ajouter un médecin</h3>  
+                </button>                      
+                
+  
+            </div>
+        </section>
+    
+    </main>    
+</body>
+</html>

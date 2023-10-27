@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin_accueil</title>
+    <link rel="stylesheet" href="../css/style_admin_interface.css">
+    <script src="../javascript/admin_interface.js" defer></script>
+    <script src="../javascript/boite_modale.js"></script>
+    <script src="../javascript/affiche_details.js"></script>
+    <script src="../javascript/bouton_switch.js"></script>
+    <script src="../javascript/responsivite.js"></script>
+    
+</head>
+<body>
+
+
+
+
+  <section  class=" details_des_historiques" onclick="masquerDetails()"> 
+    <!-- Ici nous plaçons tous les détails de informations sur historique rendez-vous!
+        Cette section est placée exceptionnellement en premier lieu de body, avant
+        même le header car c'est le meilleur endroit que nous avons touvé pour réaliser l'idée.
+        Elle s'affiche lorque l'on clique sur l'icone en "i" du tableau "Historique des activités".
+    -->
+    <div id="affichage_details" class="affichage_details">
+
+        <div class="contenu_affichage_details_accepted" id="contenu_affichage_details_accepted">
+          <h3>
+            <img class="img_statut_details" src="../images/info.png" title="afficher les détails">
+            <span>Détails du rendez-vous</span>
+          </h3>
+          <div class="rendez-vous_accepté">
+            <p>Nom du Médecin:<span>Dr Lorem ipsum</span></p>
+            <p>ID du Médecin:<span>M23 XXXX</span></p>
+            <p>Spécialté: <span>Lorem.</span></p>
+            <p>Nom du Patient: <span>Lorem Ipsum Dolor</span></p>
+            <p>ID du Patient:<span>P23 XXXX</span></p>
+            <p>Motif du rendez-vous: <span> Lorem.</span></p>
+            <p>Date du rendez-vous: <span> XX / XX / XXXX</span></p>
+            <p>Heure du rendez-vous: <span> XX : XX</span></p>
+            <p >Statut du Rendez-vous:<span> <span class="accepted">accepté</span></span></p>
+            <p>Montant payé: <span> 10.000 XOF</span></p> 
+          </div>
+          <div class="contenant_fermer">
+            <input class="Fermer" type="button" value="Fermer" id="fermerDetailsAccepte" onclick="masquerDetails()">
+          </div>
+
+
+        </div>
+
+        
+        <div class="contenu_affichage_details_canceled" id="contenu_affichage_details_canceled">
+          <h3>
+            <span>Détails du rendez-vous</span>
+          </h3>
+          <div class="rendez-vous_annulé">
+            <p>Nom du Médecin:<span>Dr Lorem ipsum</span></p>
+            <p>ID du Médecin:<span>M23 XXXX</span></p>
+            <p>Spécialté: <span>Lorem.</span></p>
+            <p>Nom du Patient: <span>Lorem Ipsum Dolor</span></p>
+            <p>ID du Patient:<span>P23 XXXX</span></p>
+            <p>Motif du rendez-vous: <span> Lorem.</span></p>
+            <p>Date du rendez-vous: <span> XX / XX / XXXX</span></p>
+            <p>Heure du rendez-vous: <span> XX : XX</span></p>
+            <p >Statut du Rendez-vous:<span> <span class="canceled">annulé</span></span></p>
+            <p>Montant payé: <span> <del>10.000 XOF</del></span></p> 
+          </div>
+          <div class="contenant_fermer">
+            <input class="Fermer" type="button" value="Fermer" id="fermerDetailsAnnule" onclick="masquerDetails()">
+        </div>
+        </div>
+    </div>
+  </section>
+
+
+
+
+  <header class="topbar">
+    <div class="icone_menu">
+      <img id="bouton_affiche_tab_bord" onclick="affichage_TableauDeBord()" src="../images/icone_menu.png" alt="Afficher_tableau_de_bord" title="Afficher le tableau de bord">
+    </div>
+    <div class="header-left">
+        <a href="Accueil.html" class="link-logo"><img class="logo" src="../images/doc2.png" alt="logoSite" title="revenir à l'accueil"/></a>
+        <p class="nom-site">SamaDocteur</p>
+    </div>
+    <p class="profil"><img src="../images/gg_profile.svg" alt="" onclick="toggleMenuProfil()"></p>
+    <div id="modalProfil" class="modal">
+        <p class="voir-pp" ><a href="profil.html">Voir Profil</a></p>
+        <hr>
+        <p class="deconnexion"><a  href="./connexion_admin.html">Se Déconnecter</a></p>
+    </div>
+  </header>
+  <main>
+        <section class="tableau_de_bord">
+            <img class="affiche_tableau_de_bord" src="../images/admin_menu.png" alt="Afficher le tableau de bord">
+            <h3>Tabeau de Bord</h3>
+            <div class="options_tableau">
+                <a href="./admin_interface.html">
+                    <button class="actual">Accueil</button>
+                </a>
+                <a href="./admin_interface2.html">
+                    <button>Médecins</button>
+                </a>
+                <a href="./admin_interface3.html">
+                    <button>Patients</button>
+                </a>
+                <a href="./admin_interface4.html">
+                    <button>Avis & commentaires</button>
+                </a>
+                <a href="./admin_interface5.html">
+                    <button>FAQs</button>
+                </a>
+            </div>
+        </section>
+        <section class="centre_droit_acceuil">
+            
+            <div>
+                <h1 class="bienvenue">
+                Bienvenue sur la page administrateur de SamaDocteur !
+            </h1>
+            </div>
+            <div class="rendez-vous">
+                <h1>Rendez-vous à venir</h1>
+                <div class="contenu_rv">
+                    <table class="upcoming_rv">
+                        <tr class="en-tete">
+                            <th>Nom du Médecin</th>
+                            <th>Specialité</th>
+                            <th>Nom du Patient</th>
+                            <th>Date du rendez-vous</th>
+                            <th>Statut</th> 
+                        </tr>   
+                        <tr class="ligne2">
+                            <td><a href="./profil_medecins/profil_med_0001.html">Dr. Fatou Ndiaye</a></td>
+                            <td>Gynecologue</td>
+                            <td><a href="./admin_interface3.html">Ndeye Astou Sagna</a></td>
+                            <td>30/10/2023 <br><span class="datetime">9:00</span></td>
+                            <td>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider"></span>
+                                </label>
+                            </td>
+                        </tr>
+                        <tr class="ligne2">
+                            <td><a href="./profil_medecins/profil_med_0003.html">Dr. Astou Camara</a></td>
+                            <td>Cardiologue</td>
+                            <td><a href="./admin_interface3.html">Mouhamed Diop</a></td>
+                            <td>30/10/2023 <br><span  class="datetime">11:05</span></td>
+                            <td>
+                              <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                              </label>
+                            </td>
+                        </tr>
+                        <tr class="ligne2">
+                            <td><a href="./profil_medecins/profil_med_0004.html">Dr. Issa Fall</a></td>
+                            <td>Généraliste</td>
+                            <td><a href="./admin_interface3.html">Aissata Ba</a></td>
+                            <td >01/11/2023 <br><span class="datetime">10:15</span></td>
+                            <td>
+                              <label class="switch switch1">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            </td>
+                        </tr>
+                        <tr class="ligne2">
+                            <td><a href="./profil_medecins/profil_med_0006.html">Dr. Djiby Diouf</a></td>
+                            <td>Généraliste</td>
+                            <td><a href="./admin_interface3.html">Papa Assane</a></td>
+                            <td>03/11/2023 <br><span class="datetime">16:30</span></td>
+                            <td>
+                              <label class="switch ">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            </td>
+                        </tr>
+                        <tr class="ligne2">
+                            <td><a href="./profil_medecins/profil_med_0001.html">Dr. Fatou Ndiaye</a></td>
+                            <td>Gynecologue</td>
+                            <td><a href="./admin_interface3.html">Oulimataou Cissé</a></td>
+                            <td>05/11/2023 <br><span class="datetime">09:15</span></td>
+                            <td>
+                              <label class="switch">
+                                <input type="checkbox">
+                                <span class="slider"></span>
+                            </label>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                
+            </div>
+            
+            <div class="container">
+                <h1 class="historiques">Historique des activites</h1>
+                  <div class="story">
+                    <table class="historic_rv">
+                      <tr class="l_1">
+                        <td style="border-bottom: 1px rgb(184, 179, 179) solid;"> Nom du Medecin</td>
+                        <td style="border-bottom: 1px rgb(184, 179, 179) solid;">Nom du patient</td>
+                        <td style="border-bottom: 1px rgb(184, 179, 179) solid;">date</td>
+                        <td style="border-bottom: 1px rgb(184, 179, 179) solid;">Lieu</td>
+                        <td style="border-bottom: 1px rgb(184, 179, 179) solid;">Statut</td>
+                        <td style="border-bottom: 1px rgb(184, 179, 179) solid;">Détails</td>
+                        
+                      </tr>
+                      <tr id="row1">
+                        <td>Astou Camara</td>
+                        <td>Aissata Ba</td>
+                        <td>22/09/2023</td>
+                        <td>pikin-saint louis</td>
+                        <td><img class="img_statut_details" src="../images/checkbox_black.png" title="A eu lieu"></td>
+                        <td>
+                            <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                        </td>
+                      </tr>
+                    
+    
+                      <tr id="row2">
+                        <td>Fama Niass</td>
+                        <td>Abdoulay Guey </td>
+                        <td>2/3/2020</td>
+                        <td>Ouakam-Dakar</td>
+                        <td><img  class="img_statut_details" src="../images/checkbox_black.png" title="A eu lieu"></td>
+                        <td>
+                            <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                        </td>
+                      </tr>
+                      
+                      <tr id="row3">
+                        <td>Weunteu Dieye</td>
+                        <td>Ousman Traore </td>
+                        <td>4/12/2019</td>
+                        <td>keur massar-Dakar</td>
+                        <td><img  class="img_statut_details" src="../images/circle-cross.png" title="Annulé"></td>
+                        <td>
+                          <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('annule')">  
+                        </td>
+                      </tr>
+    
+                      <tr id="row4">
+                          <td>Ousman Traore</td>
+                          <td>Abdoulay Guey </td>
+                          <td>22/5/2018</td>
+                          <td>pikin-saint louis</td>
+                          <td><img  class="img_statut_details" src="../images/checkbox_black.png" title="A eu lieu"></td>
+                          <td>
+                            <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                          </td>
+                      </tr>
+      
+                      <tr id="row5">
+                          <td>mohamed Diop</td>
+                          <td>Fatimata Ba </td>
+                          <td>22/4/2018</td>
+                          <td>Ouakam-Dakar</td>
+                          <td><img  class="img_statut_details" src="../images/checkbox_black.png" title="A eu lieu"></td>
+                          <td>
+                            <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                          </td>
+                      </tr>
+      
+                      <tr id="row6">
+                          <td>Abdoulay Guey</td>
+                          <td>Ousman Traore </td>
+                          <td>22/09/2013</td>
+                          <td>M'bour</td>
+                          <td><img class="img_statut_details" src="../images/circle-cross.png" title="Annulé"></td>
+                          <td>
+                            <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('annule')">
+                          </td>
+                      </tr>
+
+                      <tr id="row7">
+                          <td>Ousman Traore</td>
+                          <td>Abdoulay Guey </td>
+                          <td>22/09/2023</td>
+                          <td>pikin-saint louis</td>
+                          <td><img  class="img_statut_details" src="../images/checkbox_black.png" title="A eu lieu"></td>
+                          <td>
+                            <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                          </td>
+                      </tr>
+                      
+                      <tr id="row8">
+                          <td>Fama Niass</td>
+                          <td>Abdoulay Guey </td>
+                          <td>2/3/2020</td>
+                          <td>Ouakam-Dakar</td>
+                          <td><img  class="img_statut_details" src="../images/checkbox_black.png" title="A eu lieu"></td>
+                          <td>
+                            <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                          </td>
+                      </tr>
+      
+                      <tr id="row9">
+                          <td>Abdoulay Guey</td>
+                          <td>Ousman Traore </td>
+                          <td>4/12/2019</td>
+                          <td>keur massar-Dakar</td>
+                          <td><img class="img_statut_details" src="../images/circle-cross.png" title="Annulé">
+                          </td><td>
+                            <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('annule')">
+                          </td>
+                      </tr>
+      
+      
+                      <tr id="row10">
+                            <td>Ousman Traore</td>
+                            <td>Abdoulay Guey </td>
+                            <td>22/5/2018</td>
+                            <td>pikin-saint louis</td>
+                            <td><img  class="img_statut_details" src="../images/checkbox_black.png" title="A eu lieu"></td>
+                            <td>
+                              <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                            </td>
+                      </tr>
+        
+                      <tr id="row11">
+                            <td>mohamed Diop</td>
+                            <td>Fatimata Ba </td>
+                            <td>22/4/2018</td>
+                            <td>Ouakam-Dakar</td>
+                            <td><img  class="img_statut_details" src="../images/checkbox_black.png" title="A eu lieu"></td>
+                            <td>
+                              <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                          </td>
+                      </tr>
+        
+                      <tr id="row12">
+                            <td>Abdoulay Guey</td>
+                            <td>Ousman Traore </td>
+                            <td>22/09/2013</td>
+                            <td>M'bour</td>
+                            <td><img  class="img_statut_details" src="../images/circle-cross.png" title="Annulé"></td>
+                            <td>
+                              <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('annule')">
+                            </td>
+                      </tr>
+    
+                      <tr id="row13">
+                            <td>Ousman Traore</td>
+                            <td>Abdoulay Guey </td>
+                            <td>22/09/2023</td>
+                            <td>pikin-saint louis</td>
+                            <td><img  class="img_statut_details" src="../images/checkbox_black.png" title="A eu lieu"></td>
+                            <td>
+                              <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                            </td>
+                      </tr>
+        
+                      <tr id="row14">
+                            <td>Fama Niass</td>
+                            <td>Abdoulay Guey </td>
+                            <td>2/3/2020</td>
+                            <td>Ouakam-Dakar</td>
+                            <td><img  class="img_statut_details" src="../images/checkbox_black.png"  title="A eu lieu"></td>
+                            <td>
+                              <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                            </td>
+                      </tr>
+        
+                      <tr id="row15">
+                            <td>Abdoulay Guey</td>
+                            <td>Ousman Traore </td>
+                            <td>4/12/2019</td>
+                            <td>keur massar-Dakar</td>
+                            <td><img  class="img_statut_details" src="../images/circle-cross.png" title="Annulé"></td>
+                            <td>
+                              <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('annule')">
+                            </td>
+                      </tr>
+        
+                      <tr id="row16">
+                            <td>Ousman Traore</td>
+                            <td>Abdoulay Guey </td>
+                            <td>22/5/2018</td>
+                            <td>pikin-saint louis</td>
+                            <td><img  class="img_statut_details" src="../images/checkbox_black.png"  title="A eu lieu"></td>
+                            <td>
+                              <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                            </td>
+                      </tr>
+          
+                      <tr id="row17">
+                        <td>mohamed Diop</td>
+                        <td>Fatimata Ba </td>
+                        <td>22/4/2018</td>
+                        <td>Ouakam-Dakar</td>
+                        <td><img  class="img_statut_details" src="../images/checkbox_black.png"  title="A eu lieu"></td>
+                        <td>
+                          <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                        </td>
+                      </tr>
+          
+                      <tr id="row18">
+                        <td>Abdoulay Guey</td>
+                        <td>Ousman Traore </td>
+                        <td>22/09/2013</td>
+                        <td>M'bour</td>
+                        <td><img  class="img_statut_details" src="../images/circle-cross.png" title="Annulé"></td>
+                        <td>
+                          <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('annule')">
+                        </td>
+                      </tr>
+        
+                      <tr id="row19">
+                        <td>Ousman Traore</td>
+                        <td>Abdoulay Guey </td>
+                        <td>22/09/2023</td>
+                        <td>pikin-saint louis</td>
+                        <td><img  class="img_statut_details" src="../images/checkbox_black.png"  title="A eu lieu"></td>
+                        <td>
+                          <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                        </td>
+                      </tr>
+          
+                      <tr id="row20">
+                        <td>Fama Niass</td>
+                        <td>Abdoulay Guey </td>
+                        <td>2/3/2020</td>
+                        <td>Ouakam-Dakar</td>
+                        <td><img  class="img_statut_details" src="../images/checkbox_black.png"  title="A eu lieu"></td>
+                        <td>
+                          <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                        </td>
+                      </tr>
+          
+                      <tr id="row21">
+                        <td>Abdoulay Guey</td>
+                        <td>Ousman Traore </td>
+                        <td>4/12/2019</td>
+                        <td>keur massar-Dakar</td>
+                        <td><img  class="img_statut_details" src="../images/circle-cross.png" title="Annulé"></td>
+                        <td>
+                          <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('annule')">
+                         </td>
+                      </tr>
+          
+          
+                      <tr id="row22">
+                        <td>Ousman Traore</td>
+                        <td>Abdoulay Guey </td>
+                        <td>22/5/2018</td>
+                        <td>pikin-saint louis</td>
+                        <td><img  class="img_statut_details" src="../images/checkbox_black.png"  title="A eu lieu">
+                        </td><td>
+                          <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                        </td>
+                      </tr>
+            
+                      <tr id="row23">
+                        <td>mohamed Diop</td>
+                        <td>Fatimata Ba </td>
+                        <td>22/4/2018</td>
+                        <td>Ouakam-Dakar</td>
+                        <td><img  class="img_statut_details" src="../images/checkbox_black.png"  title="A eu lieu"></td>
+                        <td>
+                          <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('accepte')">
+                        </td>
+                      </tr>
+            
+                      <tr id="row24">
+                        <td>Abdoulay Guey</td>
+                        <td>Ousman Traore </td>
+                        <td>22/09/2013</td>
+                        <td>M'bour</td>
+                        <td><img  class="img_statut_details" src="../images/circle-cross.png" title="Annulé"></td>
+                        <td>
+                          <img class="img_statut_details" src="../images/info.png" title="afficher les détails" onclick="afficherDetails('annule')">
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+            </div>
+        </section>
+    
+  </main>    
+</body>
+</html>

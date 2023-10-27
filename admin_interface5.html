@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin_FAQs</title>
+    <link rel="stylesheet" href="../css/style_admin_interface.css">
+    <link rel="stylesheet" href="../css/style_admin_FAQS.css">
+    <script src="../javascript/admin_interface.js" defer></script>
+    <script src="../javascript/admin_Faqs.js" defer></script>
+    <script src="../javascript/responsivite.js"></script>
+    
+</head>
+<body>
+    <header class="topbar">
+        <div class="icone_menu">
+          <img id="bouton_affiche_tab_bord" onclick="affichage_TableauDeBord()" src="../images/icone_menu.png" alt="Afficher_tableau_de_bord" title="Afficher le tableau de bord">
+        </div>
+        <div class="header-left">
+            <a href="Accueil.html" class="link-logo"><img class="logo" src="../images/doc2.png" alt="logoSite" title="revenir à l'accueil"/></a>
+            <p class="nom-site">SamaDocteur</p>
+        </div>
+        <p class="profil"><img src="../images/gg_profile.svg" alt="" onclick="toggleMenuProfil()"></p>
+        <div id="modalProfil" class="modal">
+            <p class="voir-pp" ><a href="profil.html">Voir Profil</a></p>
+            <hr>
+            <p class="deconnexion"><a  href="./connexion_admin.html">Se Déconnecter</a></p>
+        </div>
+      </header>
+    <main>
+        <section class="tableau_de_bord">
+            <h3>Tabeau de Bord</h3>
+            <div class="options_tableau">
+                <a href="./admin_interface.html">
+                    <button>Accueil</button>
+                </a>
+                <a href="./admin_interface2.html">
+                    <button>Médecins</button>
+                </a>
+                <a href="./admin_interface3.html">
+                    <button>Patients</button>
+                </a>
+                <a href="./admin_interface4.html">
+                    <button>Avis & commentaires</button>
+                </a>
+                <a href="./admin_interface5.html">
+                    <button  class="actual">FAQs</button>
+                </a>
+            </div>
+        </section>
+        <section class="centre_droit">
+            <div class="container-faq">
+                <h1>Admin & FAQs</h1>
+                <section class="body-faq">
+                    <div class="questions question1">
+                            <button>Q1 : L'abonnement commence à courir à partir de quand ?</button>
+                            <img class="modifier" src="../images/modifier.png" title="Modifier">
+                            <img class="delete" src="../images/delete.png" title="Supprimer">
+                            <div class="reponses reponse1 rep-hidden">
+                            <p>L’abonnement commence à courir à partir du jour où le paiement est effectué.</p>
+                            </div>
+                    </div>
+                    <div class="questions question2">
+                        <button>Q2 : Combien de temps dure la période d'essai ?</button>
+                        <img class="modifier" src="../images/modifier.png" title="Modifier">                         
+                        <img class="delete" src="../images/delete.png" title="Supprimer">
+                        
+                        <div class="reponses reponse2 rep-hidden">
+                            <p>La période d’essai dure 30 jours, soit l’équivalent d’un mois calendaire.</p>
+                        </div>
+                    </div>
+                    <div class="questions question3">
+                        <button>Q3 : Qu'est-ce qui différencie la pack gratuit, de la version d'essai d'un mois ?</button>
+                        <img class="modifier" src="../images/modifier.png" title="Modifier">
+                        <img class="delete" src="../images/delete.png" title="Supprimer">
+                        <div class="reponses reponse3 rep-hidden">
+                            <p>La version d’essai d’un mois n’est valable que pour les packs Classique et Premium. Les essais des packs Classique et Premium sont caractérisés par une utilisation complète et intégrale de tous les services proposés par freedocteur pendant une durée de 30 jours. Le pack gratuit, quant à lui, est une formule que nous proposons en illimité aux praticiens qui souhaitent utiliser la plateforme en version expérimentation sans durée précise. Le pack gratuit est limité en termes de fonctionnalités (notifications et nombre mensuel de rendez-vous).</p>
+                        </div>
+                    </div>
+                    <div class="questions question4">
+                        <button>Q4 : Comment mes données seront protégées ?</button>
+                        <img class="modifier" src="../images/modifier.png" title="Modifier">
+                        <img class="delete" src="../images/delete.png" title="Supprimer">
+                        <div class="reponses reponse4 rep-hidden">
+                            <p>Les informations recueillies sur le site sont enregistrées dans un fichier informatisé par freedocteur dans le cadre de votre demande d’ouverture de compte. Ces données seront utilisées pour vous contacter dans le cadre de vos rendez-vous médicaux. Conformément au code de protection des données personnelles en vigueur au Sénégal (loi 2008-12), freedocteur garantit à ses utilisateurs (patients et médecins) un droit d’accès total à leurs données, un droit de rectification ou de retrait de leur consentement à l'exploitation de leurs données.</p>
+                        </div>
+                    </div>
+                    <div class="questions question5">
+                        <button>Q5 : Je suis déjà sur une plateforme de prise de rendez-vous médicaux en ligne ?</button>
+                        <img class="modifier" src="../images/modifier.png" title="Modifier">
+                        <img class="delete" src="../images/delete.png" title="Supprimer">
+                        <div class="reponses reponse5 rep-hidden">
+                            <p>Il est tout à fait possible d’allier les deux plateformes. Les plateformes de prise de rendez-vous médicaux sont des canaux permettant de faciliter l’accès aux médecins. Toutefois, freedocteur présente les avantages compétitifs suivants :</p>
+                            <p>Nous allions plusieurs fonctionnalités (notifications SMS et emails, géolocalisations et suivi du carnet de santé des patients, facturation, etc.)</p>
+                            <p>Nous respectons totalement le Code de protection des données personnelles (loi 2008-12) applicable au Sénégal ainsi que les standards internationaux applicables à notre secteur.</p>
+                            <p>Nous disposons d’un service de suivi clientèle, personnalisé avec un chargé de clientèle pour chaque médecin. Ce dernier est l’interlocuteur privilégié du médecin et est chargé de suivre l’utilisation du praticien et de ses patients.</p>
+                            <p>Nous disposons d’un service d’assistance technique disponible 24h/24 et 7j/7.</p>
+                        </div>
+                    </div>
+                    <div class="questions question6">
+                        <button>Q6 : Pourrais-je combiner l'agenda de SamaDocteur avec Google Agenda ?</button>
+                        <img class="modifier" src="../images/modifier.png" title="Modifier">
+                        <img class="delete" src="../images/delete.png" title="Supprimer">
+                        <div class="reponses reponse6 rep-hidden">
+                            <p>Non, ce n’est pas possible de combiner l’agenda freedocteur avec celui de Google Agenda car les systèmes utilisés ne sont pas identiques.</p>
+                        </div>
+                    </div>
+                </section>
+                <form class="other-question">
+                    <div class="other-question-contain">
+                        <input type="text" name="new-question" id="new-question" placeholder="Ajouter une question..." required>
+                        <textarea name="new-response" id="new-response" placeholder="Réponse..." required></textarea>
+                    </div>
+                    <button id="submit-button">Ajouter</button>
+                </form>
+            </div>
+        </section>  
+    </main>    
+</body>
+</html>

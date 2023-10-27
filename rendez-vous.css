@@ -1,0 +1,90 @@
+
+.main{
+    display: block;
+    padding-top: 0;
+}
+
+table.div1-consult {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 10px;
+    text-align: left;
+}
+
+td span{
+    color: rgb(0, 0, 0);
+    padding: 3px 5px;
+    border-radius: 8px;
+    font-size: 14px;
+    width: 100%;
+    font-weight: bold;
+}
+
+td span.accepter{
+    background-color: rgb(64, 247, 64);
+}
+
+td span.annuler{
+    background-color: rgb(250, 161, 161);
+}
+
+td span.attente{
+    background-color: rgb(244, 248, 8);
+}
+
+th {
+    background-color: rgba(7, 109, 15, 0.788);
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #dbfce3;
+}
+
+tr:nth-child(odd) {
+    background-color: #b3f7c4;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.rv-title{
+    display: flex;
+    margin: 30px auto;
+    background-color: #ecf0f3;
+    border-radius: 20px;
+    width: 50%;
+    justify-content: center;
+
+    border: 3px solid rgb(255, 255, 255);
+    box-shadow: -3px -3px 7px #ffffff,
+                3px 3px 5px #ceced1,
+                inset 5px 5px 7px #dadada;
+}
+
+.rv-title p{
+    font-size: 32px;
+    font-weight: bold;
+    margin: 15px 0;
+    color: rgb(5, 5, 5);
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .main{
+        width: auto;
+    }
+    .button-sb{
+        margin-bottom: 10px;
+    }
+    .rv-title p{
+        font-size: 26px;
+    }
+}

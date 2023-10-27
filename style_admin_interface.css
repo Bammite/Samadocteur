@@ -1,0 +1,706 @@
+/*Style pour le header*/
+*{
+    height: max-content;
+}
+
+body{
+    margin:0;
+    box-sizing: border-box;
+    
+    background-color:  rgba(217, 217, 217, 0.59);
+}
+
+.topbar{
+    background-color:#000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    border-bottom: black 1px solid;
+    z-index: 1;
+    height: 80px;
+    
+    
+}
+.icone_menu
+{
+    display: none;
+    height: 100%;
+    
+}
+.icone_menu img
+{
+    width: 60px;
+    height: 60px;
+    
+}
+
+.topbar,.header-left{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-left{
+    float: left;
+    margin-top: 10px;
+}
+
+.logo{
+    margin: 0 20px;
+    width: 60px;
+    height: 60px;
+}
+
+
+.nom-site{
+    font-size: 26px;
+    margin: 20px 0 0;
+    color: white;
+}
+
+.container{
+    display: flex;
+    flex-wrap: nowrap;
+    /* margin-top: 70px; */
+    width: 100%;
+}
+
+
+.profil{
+    margin-right: 30px;
+    margin-top: 25px;
+    width: 30px;
+    height: auto;
+}
+.profil:hover
+{
+    cursor: pointer;
+}
+.profil img{
+    width: 100%;
+    padding-top: 4px;
+}
+
+#modalProfil {
+    display: none;
+    position: absolute;
+    background-color: rgb(235, 241, 238);
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(105, 104, 104, 0.8);
+    z-index: 1; 
+    width: 200px;
+    height: 130px;
+}
+
+.voir-pp,.deconnexion{
+    margin: 5px 0;
+    background-color: rgb(235, 241, 238);
+}
+
+.voir-pp a, .deconnexion a{
+    padding: 10px 0 10px 20px;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 2;
+    width: calc(100% - 5px);
+    color: black;
+}
+hr{
+    margin: 0;
+    border-color: white;
+}
+
+.voir-pp:hover,.deconnexion:hover{
+    background-color: rgb(209, 216, 213);
+}
+
+/*style main*/
+main 
+{
+    display: flex; /* Utilisation de flex pour placer les sections côte à côte */
+    
+}
+
+
+/*style section de gauche (tableau de bord)*/
+
+.tableau_de_bord
+{
+    
+    position: fixed;
+    width: 315px;
+    flex-shrink: 0;
+    background: rgba(0, 0, 0, 0.74);
+    padding-top: 60px; /* Permet de décaler le texte "talbeau de bord" autant qu'on veut*/
+    height: 100%;
+}
+.affiche_tableau_de_bord
+{
+    width: 30px;
+    height: 30px;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    
+    top: 90px;
+    
+    visibility: hidden;
+}
+.tableau_de_bord h3
+{
+    
+    color: #FFF;
+    text-align: center;
+    font-family: inherit;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    display: flex;
+    
+    height: 60px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+
+    border-radius: 20px;
+    background: #000;
+}
+
+.options_tableau
+{
+    display: flex;
+    flex-direction: column;
+    
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    flex-shrink: 0;
+    align-content: center;
+    
+    
+}
+
+.options_tableau button
+{
+    background: #FFF;
+    color: #000;
+    height: 47px;
+    width: 170px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    text-align: center;
+    
+}
+
+.options_tableau button:hover{
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.384);
+    border-color: #0ed807;
+    
+}
+
+.options_tableau .actual
+{
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.74);
+    border-color: #0ed807;  
+}
+/*style section de droite (centre droit)*/
+.centre_droit 
+{
+        padding-left: 315px;
+        flex: 1; /* Laissez la deuxième section prendre autant d'espace que possible */
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centre le contenu verticalement */
+        align-items: center; /* Centre le contenu horizontalement */
+        padding-top: 70px;
+        max-height: auto;
+}
+
+.liste_medecins
+{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    gap: 30px;
+    
+}
+
+.liste_medecins  button
+{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 75px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    background: rgba(0, 0, 0, 0.29);
+    cursor: pointer;
+}
+
+.liste_medecins button:hover 
+{
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.liste_medecins button h2 
+{
+    font-size: 24px; /* Style du titre H2 */
+    margin: 0; /* Supprime les marges par défaut du navigateur */
+   
+}
+
+.liste_medecins button h4 {
+    font-size: 16px; /* Style du sous-titre H4 */
+    margin: 0; /* Supprime les marges par défaut du navigateur */
+    
+}
+
+.liste_medecins a
+{
+    text-decoration: none;
+}
+ .liste_medecins .ajout
+{
+    background: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+}
+
+.liste_medecins .ajout:hover
+{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.centre_droit_acceuil
+{
+    
+margin-top: 70px;
+    
+margin-left: 315px;
+    
+display: flex;
+    
+flex-direction: column;
+    
+width: 100%;
+}
+.bienvenue
+{
+    text-align: center;
+}
+
+.centre_droit_acceuil .bienvenue
+{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.centre_droit_acceuil .bienvenue
+{
+ font-size: 28px;
+ transition: 3s;
+}
+
+/*les rendez-vous*/
+
+.rendez-vous h1
+{
+    margin-left: 50px;
+}
+.upcoming_rv
+{
+    
+
+}
+.contenu_rv
+{
+    /* display: flex; */
+    background-color: white;
+    font-size: 17px;
+    margin: 10px;
+    padding-left: 5px;
+    border-radius: 10px;
+}
+.contenu_rv table
+{
+    border-collapse: collapse;
+}
+.contenu_rv a
+{
+    color: #000;
+    text-decoration: none;
+}
+.contenu_rv a:hover
+{
+    color: #0ed807;
+}
+.en-tete
+{
+    
+    gap: 40px;
+    text-align: left;
+    
+}
+.en-tete th
+{
+    border-right: 1px solid grey;
+    border-bottom: 1px solid grey;
+    border-collapse: collapse;
+
+    width: 40px;
+    height: 60px;
+}
+.en-tete th
+{
+    border-right: 1px  grey;
+}
+
+
+
+.ligne2 td {
+    width: 230px;
+    height: 30px;
+    border-right: 1px solid gray;
+    border-top: 1px solid grey;
+    border-collapse: collapse;
+}
+.ligne2 td:last-child
+{
+    border-right: 1px;
+    
+    
+    
+}
+
+.rendez-vous span
+{
+    color:#0ed807;
+}
+
+.en-tete th ,.ligne2 td
+{
+    padding-left: 5px;
+}
+
+
+
+/*Container*/
+.container
+{
+    display: flex;
+    flex-direction: column;
+}
+.container .story
+  {
+    background-color: #f9f9fc;
+    font-size: 17px;
+    margin: 10px;
+    padding-left: 5px;
+    border-radius: 10px;
+    
+
+  }
+  .container table{
+    border-collapse: collapse;
+  }
+  .container td{
+    width: 220px;
+    height: 30px;
+  }
+  .container .story .l_1{
+    height: 60px;
+  }
+  .container .historiques{
+    margin-left: 50px ;
+  }
+
+  
+
+  .historic_rv td:nth-child(5)
+  {
+    border-right: 1px solid;
+    text-align: center;
+    
+  }  
+  .historic_rv td:last-child
+  {
+    
+    text-align: center;
+    width: 15px;
+  }
+
+  .img_statut_details
+  {
+    height: 20px;
+    width: 20px;
+  }
+
+  .historic_rv td:last-child .img_statut_details /*cible l'image en "i" de détails de la dernière colonne*/
+  {
+    transition: transform 0.3s;
+
+  }
+  .historic_rv td:last-child .img_statut_details:hover
+  {
+    cursor: pointer;
+    transform: translate(+1px,-1px);
+  }
+
+/* Styles boite details */
+.affichage_details {
+    display: none;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.60);
+}
+
+.contenu_affichage_details_accepted,
+.contenu_affichage_details_canceled {
+    background-color: white;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 90%;
+    width: 40%;
+    transform: translate(-50%, -50%);
+    border: 1px inset rgb(241, 238, 238);
+    border-radius: 5px;
+}
+
+.contenu_affichage_details_accepted h3,
+.contenu_affichage_details_canceled h3 {
+    margin-left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    width: fit-content;
+    gap: 3px;
+    font-size: 22px;
+    margin-bottom: 50px;
+}
+
+.contenu_affichage_details_accepted h3 span,
+.contenu_affichage_details_canceled h3 span {
+    font-weight: bold;
+}
+
+.contenu_affichage_details_accepted p,
+.contenu_affichage_details_canceled p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.contenu_affichage_details_accepted .accepted
+{
+    background-color: rgb(64, 247, 64);
+    padding: 3px 5px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.contenu_affichage_details_canceled .canceled {
+    background-color: rgb(250, 161, 161);
+    padding: 3px 5px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.contenu_affichage_details_accepted span,
+.contenu_affichage_details_canceled span {
+    font-size: 15px;
+    font-weight: 100;
+    margin-left: 10px;
+}
+
+.contenant_fermer {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    bottom: 5px;
+    justify-content: center;
+}
+
+.contenu_affichage_details_accepted input,
+.contenu_affichage_details_canceled input {
+    width: 40%;
+    height: 30px;
+    margin: 20px;
+    border: 1px outset rgb(240, 237, 237);
+    background-color: rgb(183, 179, 179);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.contenu_affichage_details_accepted input:hover,
+.contenu_affichage_details_canceled input:hover {
+    background-color: grey;
+    color: white;
+}
+
+
+/* gère le bouton switch*/
+
+/* Style de base pour le conteneur du switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    border-radius: 20px;
+    width: 60px;
+    height: 30px;
+    background-color: #00ff00; /* Vert */
+  }
+    
+  /* Style du fond vert du switch en position désactivée */
+  .switch input[type="checkbox"] {
+    display: none;
+    
+  }
+  
+  
+  /* Style de l'interrupteur lorsque le switch est activé */
+.switch .slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    right: 4px;
+    bottom: 5px;
+    background-color: white; /* couleur du slider de l'interrupteur */
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  /* Style de l'interrupteur lorsque le switch est activé (déplacement) */
+  input[type="checkbox"]:checked + .slider:before {
+    transform: translateX(-32px);
+    
+  }
+/* Style de l'interrupteur lorsque le switch est activé (changement de couleur) */
+  .switch input[type="checkbox"]:checked + .switch {
+    background-color: #ff0000; /* Rouge */
+    
+  }
+  
+  
+/* fin du bouton switch*/
+
+/* responsivite*/
+
+@media screen and (max-width: 800px) 
+{
+    .tableau_de_bord{
+        
+        display: none;
+    }
+    .tableau_de_bord h3
+    {
+        font-size: 22px;
+        height: 40px;
+    }
+    .options_tableau button
+    {
+        height: 47px;
+        width: 130px;
+        font-size: 16px;
+    }
+    .centre_droit_acceuil
+    {
+        margin-left: 0;
+    }
+    .centre_droit
+    {
+        padding-left: 0;
+    }
+    .topbar
+    {
+
+    }
+    .icone_menu
+    {
+        display: flex;
+        align-items: center;
+
+    }
+    .contenu_affichage_details_accepted
+    {
+        width: 60%;
+        transform: translate(-50%, -50%);
+    }
+    .contenu_affichage_details_canceled
+    {
+        width: 60%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+
+@media screen and (max-width: 560px) 
+{
+    .tableau_de_bord{
+        width: 150px;
+        display: none;
+    }
+    .tableau_de_bord h3
+    {
+        font-size: 22px;
+        height: 40px;
+    }
+    .options_tableau button
+    {
+        height: 47px;
+        width: 130px;
+        font-size: 16px;
+    }
+    .centre_droit_acceuil
+    {
+        margin-left: 0;
+        
+    
+    }
+    .centre_droit
+    {
+        padding-left: 0;
+    }
+    .topbar .header-left .nom-site
+    {
+        display: none;
+    }
+    .icone_menu
+    {
+        display: flex;
+        align-items: center;
+
+    }
+
+    .contenu_affichage_details_accepted
+    {
+        width: 80%;
+        transform: translate(-50%, -50%);
+    }
+    .contenu_affichage_details_canceled
+    {
+        width: 80%;
+        transform: translate(-50%, -50%);
+    }
+}

@@ -1,0 +1,154 @@
+
+.centre_droit{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    width: calc(100% - 300px);
+    width: 100%;
+    padding-top: 85px;
+    padding-bottom: 20px;
+    overflow-y: hidden;
+}
+
+.container-faq{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    border: 1px solid;
+    border-radius: 10px;
+    height: max-content;
+    background-color: white;
+}
+
+.container-faq h1{
+    text-align: center;
+    font-size: 36px;
+}
+
+.container-faq h1,
+.container-faq .body-faq{
+    padding: 20px;
+}
+
+.rep-hidden{
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+
+.questions button{
+    width: 89%;
+    text-align: start;
+    height: 60px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 16px;
+    padding-left: 15px;
+    margin-right: 20px;
+    
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px inset rgb(59, 59, 57);
+    box-shadow: -3px -3px 7px black,
+                3px 3px 5px black,
+                inset 5px 5px 5px #b0afaf;
+}
+
+
+/* les icones pour modifer et supprimer*/
+.share, .delete
+{
+    height: 25px;
+    width: 25px;
+    transition: transform 0.3s;
+    
+}
+
+
+.share:hover,.delete:hover
+{
+    cursor: pointer;
+    cursor: pointer;
+    transform: translate(+1px,-1px);
+}
+
+.reponses{
+    margin-left: 20px;
+    width: 85%;
+    text-align: justify;
+}
+
+.other-question{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+
+.other-question-contain{
+    width: 50%;
+}
+.other-question-contain input{
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.other-question-contain textarea{
+    width: 100%;
+    padding-top: 10px;
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.other-question button{
+    width: 20%;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: 1px outset rgb(240, 237, 237);
+    box-shadow: 5px 5px 5px rgb(209, 208, 208);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.other-question button:hover{
+    background-color: rgb(183, 179, 179);
+    color: white;
+}
+
+.validation {
+    display: none;
+}
+
+
+
+
+
+@media screen and (max-width:900px){
+    .main{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 0;
+        justify-content: initial;
+        margin: 0;
+    }
+    .button-sb{
+        display: flex;
+        align-self: start;
+        margin-bottom: 30px;
+        margin-left: 50px;
+    }
+}
+
+@media screen and (max-width:470px){
+    .questions button{
+        font-size: 13px;
+    }
+}

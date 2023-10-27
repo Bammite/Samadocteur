@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>admin_patients</title>
+    <link rel="stylesheet" href="../css/style_admin_interface.css">
+    <script src="../javascript/admin_interface.js" defer></script>
+    <script src="../javascript/boite_modale.js"></script>
+    <script src="../javascript/responsivite.js"></script>
+</head>
+<body>
+    <header class="topbar">
+        <div class="icone_menu">
+          <img id="bouton_affiche_tab_bord" onclick="affichage_TableauDeBord()" src="../images/icone_menu.png" alt="Afficher_tableau_de_bord" title="Afficher le tableau de bord">
+        </div>
+        <div class="header-left">
+            <a href="Accueil.html" class="link-logo"><img class="logo" src="../images/doc2.png" alt="logoSite" title="revenir à l'accueil"/></a>
+            <p class="nom-site">SamaDocteur</p>
+        </div>
+        <p class="profil"><img src="../images/gg_profile.svg" alt="" onclick="toggleMenuProfil()"></p>
+        <div id="modalProfil" class="modal">
+            <p class="voir-pp" ><a href="profil.html">Voir Profil</a></p>
+            <hr>
+            <p class="deconnexion"><a  href="./connexion_admin.html">Se Déconnecter</a></p>
+        </div>
+      </header>
+    <main>
+        <section class="tableau_de_bord">
+            <h3>Tabeau de Bord</h3>
+            <div class="options_tableau">
+                <a href="./admin_interface.html">
+                    <button>Accueil</button>
+                </a>
+                <a href="./admin_interface2.html">
+                    <button>Médecins</button>
+                </a>
+                <a href="./admin_interface3.html">
+                    <button class="actual">Patients</button>
+                </a>
+                <a href="./admin_interface4.html">
+                    <button>Avis & commentaires</button>
+                </a>
+                <a href="./admin_interface5.html">
+                    <button>FAQs</button>
+                </a>
+            </div>
+        </section>
+        <section class="centre_droit">    
+            <div class="liste_medecins"> <!-- Pour les patients mais on utilise le meme code css-->
+                <a href="./profil_patients/profil_pat_0001.html">
+                    <button>
+                        <h2>Samba Kane</h2>
+                        <h4>02/07/1994 à Dakar</h4>
+                    </button>
+                </a>
+                <a href="./profil_patients/profil_pat_0001.html">
+                    <button>
+                        <h2>Ibrahima Konate</h2>
+                        <h4>27/06/1999 à Kirikoro</h4>
+                    </button>   
+                </a>
+                <a href="./profil_patients/profil_pat_0001.html">
+                    <button>
+                        <h2>Ndeye AStou Sagna</h2>
+                        <h4>12/03/2004 à Bignona</h4>
+                    </button>
+                </a>
+                <a href="./profil_patients/profil_pat_0001.html">
+                    <button>
+                        <h2>Aissata Ba</h2>
+                        <h4>13/02/1998 à Podor</h4>
+                    </button>
+                </a>
+                <a href="./profil_patients/profil_pat_0001.html">
+                    <button>
+                        <h2>Mouhamed Diop</h2>
+                        <h4>24/01/1998 à Thies</h4>
+                    </button>
+                </a>
+                <a href="./profil_patients/profil_pat_0001.html">
+                    <button>
+                        <h2>Papa Assane Fall</h2>
+                        <h4>06/12/2003 à Dakar</h4>
+                    </button>
+                </a>
+                <a href="./profil_patients/profil_pat_0001.html">
+                    <button>
+                        <h2>Oulimatou Cisse</h2>
+                        <h4>21/11/1996 à Saint Louis</h4>
+                    </button>
+                </a>
+                
+                <button class="ajout">
+                    <h3> + Ajouter un patient</h3>  
+                </button>     
+            </div>
+        </section> 
+    </main>    
+</body>
+</html>

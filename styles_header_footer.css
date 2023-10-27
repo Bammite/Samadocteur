@@ -1,0 +1,64 @@
+/*Styles du header*/
+.topbar{
+    background-color:white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-height: 70px;
+    width: 100%;
+    
+    
+}
+.topbar,.header-left
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-left
+{
+    float: left;
+}
+.logo{
+    margin: 0 20px;
+}
+.connexion{
+    margin: 15px 70px 15px 0;
+    float: right;
+}
+button{
+    
+    border-radius: 7px;
+    background-color: white;
+    margin-right:20px ;
+    width:120px;
+    height: 30px;
+}
+button a
+ {
+    color: black;
+    margin: auto;
+    text-decoration: none;
+ }
+
+/*Styles du footer*/
+
+/*.foot{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.pm{
+    color: #597CF6;
+    font-size: 14px;
+    font-weight: 100;
+    font-family: sans-serif;
+}
+.forH3{
+    font-family: sans-serif;
+    color: white;
+}*/
+
+
